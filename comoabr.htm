@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <meta name="Author" content="Giba Assis Brasil">
+    <meta name="GENERATOR" content="Mozilla/4.51 [pt] (WinNT; I)
+      [Netscape]">
+    <title>MONTAGEM - COMO ABRIR PROJETOS DE VERSOES MAIS NOVAS</title>
+  </head>
+  <body bgcolor="#ccffff" link="#0000ff" text="#000000" vlink="#0000ff"
+    alink="#ff0000">
+    <div style="margin-left: 40px;"><big><span style="font-weight:
+          bold;">UNISINOS / CRAV - CURSO DE REALIZAÇÃO AUDIOVISUAL</span><br
+          style="font-weight: bold;">
+        <span style="font-weight: bold;">ESPECIALIDADE EM MONTAGEM -
+          2020</span><br style="font-weight: bold;">
+        <span style="font-weight: bold;">Prof. GIBA ASSIS BRASIL</span><br
+          style="font-weight: bold;">
+      </big><small>(com agradecimento especial ao Telson)<br>
+      </small><br>
+      <br>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">COMO ABRIR PROJETOS DE VERSÕES MAIS RECENTES<br>
+                (do Adobe Premiere)<br>
+              </span><br>
+              Quando se tenta abrir um projeto do Adobe Premiere que foi
+              gerado por uma versão mais recente que a nossa, o programa
+              invariavelmente responde que é impossível.<br>
+              <br>
+              Mas:<br>
+              <br>
+              (a) todo projeto do Premiere (.prproj) é um arquivo de
+              texto, codificado em XML, e comprimido sem perdas no
+              formato GZIP;<br>
+              <br>
+              (b) a principal diferença entre os projetos de diferentes
+              versões é um código colocado no arquivo APENAS para
+              impedir que ele seja aberto por versões mais antigas do
+              programa;<br>
+              <br>
+              (c) entendendo isso, este código pode ser modificado, o
+              que permite abrir o projeto.<br>
+              <br>
+              PROCEDIMENTO:<br>
+              <br>
+              (1) Com o programa 7-zip ou equivalente, extraia o
+              arquivo-texto que está dentro do projeto. Para isso,
+              selecione o projeto e clique em EXTRACT (extrair).<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <img alt="" src="abrir01.jpg" width="350" height="230"><br>
+      <br>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Na pasta de destino
+              selecionada, o programa criará uma pasta com o mesmo nome
+              do projeto (mas sem a terminação), e dentro dela um novo
+              arquivo com o mesmo nome (também sem terminação). Perceba
+              que o arquivo descomprimido é quase 20 vezes maior que o
+              projeto original.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <img alt="" src="abrir01a.jpg" width="350" height="230"><br>
+      <br>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">(2) Num programa de edição
+              de texto simples (Notepad para Windows, Text Editor para
+              Mac, Kate para Linux, etc.), abra o novo arquivo, já
+              expandido.<br>
+              <br>
+              Na quarta linha de texto, está o código da versão do
+              Premiere em que o projeto foi criado. Repare que não é o
+              nome oficial da versão, mas um código interno. No caso:
+              38.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <img alt="" src="abrir02.jpg" width="400" height="175"><br>
+      <br>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">(3) Modifique este código
+              para corresponder à sua versão do Adobe Premiere.<br>
+              <br>
+              (Para isto, você vai ter que abrir um projeto qualquer
+              criado por esta sua versão. No caso, vou modificar para
+              33, que corresponde à minha versão, de 2017.)<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <img alt="" src="abrir03.jpg" width="400" height="175"><br>
+      <br>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">(4) Salve o arquivo.<br>
+              <br>
+              (5) Recomprima o arquivo modificado, com o mesmo programa
+              (7-Zip) que foi usado para abri-lo. Para isso, selecione o
+              arquivo e clique em ADICIONAR (Add).<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <img alt="" src="abrir04.jpg" width="350" height="230"><br>
+      <br>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">O 7-Zip vai abrir um menu
+              com opções. <br>
+              <br>
+              (6) Selecione o formato de arquivo "gzip" e mantenha as
+              outras opções no padrão.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <img alt="" src="abrir05.jpg" width="350" height="350"><br>
+      <br>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Na mesma pasta, vai ser
+              criado um novo arquivo comprimido, com o mesmo nome e a
+              terminação .gz<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <img alt="" src="abrir06.jpg" width="350" height="230"><br>
+      <br>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">(7) Atualize o nome do
+              arquivo e modifique a terminação para .prproj<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <img alt="" src="abrir07.jpg" width="350" height="230"><br>
+      <br>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Este projeto é igual ao
+              original, e pode ser aberto pela versão mais antiga do
+              Premiere.<br>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

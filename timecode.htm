@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <meta name="Author" content="Giba Assis Brasil">
+    <meta name="GENERATOR" content="Mozilla/4.51 [pt] (WinNT; I)
+      [Netscape]">
+    <title>MONTAGEM - TIMECODE</title>
+  </head>
+  <body bgcolor="#ccffff" link="#0000ff" text="#000000" vlink="#0000ff"
+    alink="#ff0000">
+    <div style="margin-left: 40px;"> <b><font size="+1">UNISINOS / CRAV
+          - CURSO DE REALIZAÇÃO AUDIOVISUAL</font></b> <br>
+      <b><font size="+1">ESPECIALIDADE EM MONTAGEM I - 2020</font></b><br>
+      <b><font size="+1">Prof. GIBA ASSIS BRASIL</font></b><br>
+      &nbsp;<br>
+      <br>
+      <span style="font-weight: bold;"></span>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">TIMECODE<br>
+                <br>
+              </span>1. CONCEITO<br>
+              <br>
+              Timecode (código de tempo) é uma sequência de números
+              usada com o objetivo de identificar de forma única e
+              ordenada cada imagem isolada de um conjunto de imagens em
+              movimento - no caso, a totalidade do material de um
+              projeto audiovisual.<br>
+              <br>
+              <br>
+              2. <a href="kc-tc.jpg">TIMECODE x KEYCODE</a><br>
+              <br>
+              Os sistemas de timecode para vídeo (imagem eletrônica com
+              ilusão de movimento) desde 1967 utilizam o formato de oito
+              dígitos agrupados em duplas, separados por sinais de dois
+              pontos (:) e representando horas, minutos, segundos e
+              frames, por isso chamado pela sigla HMSF, ou mais
+              especificamente:<br>
+              <br>
+              HH:MM:SS:FF<br>
+              <br>
+              Mais recentemente, alguns sistemas de timecode para vídeos
+              na internet (ou para audio) utilizam milissegundos em vez
+              da contagem de frames: é o sistema HMSM, ou:<br>
+              <br>
+              HH:MM:SS,mmm<br>
+              <br>
+              O sistema Keycode deriva da "numeração de borda" que o
+              cinema já utilizava desde 1919, mas foi padronizado pela
+              Kodak em 1990, com o acréscimo do código de barras. Esse
+              sistema usa um grupo de quatro dígitos para medir o número
+              de pés e mais dois dígitos para os fotogramas. Na verdade,
+              não é um "código de tempo", mas de distância:<br>
+              <br>
+              PPPP+FF<br>
+              <br>
+              <br>
+              3. FORMATOS DE TIMECODE<br>
+              <br>
+              Para vídeo no formato NTSC, que trabalha com 30 frames por
+              segundo (seja entrelaçado ou progressivo), o maior número
+              de timecode possível é:<br>
+              <br>
+              23:59:59:29<br>
+              <br>
+              Para vídeo PAL ou SECAM (25 quadros por segundo), o
+              timecode máximo é:<br>
+              <br>
+              23:59:59:24<br>
+              <br>
+              Mas o "cinema digital" muitas vezes trabalha com formato
+              compatível com a cadência tradicional do cinema (24
+              quadros por segundo), seja na captação, montagem ou
+              projeção. Portanto, o timecode máximo deste formato é:<br>
+              <br>
+              23:59:59:23<br>
+              <br>
+              O timecode com milissegundos, independentemente do formato
+              de vídeo utilizado, pode atingir no máximo o valor:<br>
+              <br>
+              23:59:59.999<br>
+              <br>
+              4. DROP FRAME (DF) E NON-DROP FRAME (NDF)<br>
+              <br>
+              - Na verdade, desde que o NTSC passou a trabalhar com cor
+              (1953), a sua cadência real deixou de ser 30 quadros por
+              segundo. Para evitar interferências entre o sinal de cor e
+              o sinal sonoro, a cadência de imagem foi reduzida em 0,1%,
+              ficando em 29,97 quadros por segundo.<br>
+              <br>
+              - Como o timecode só utiliza números inteiros, passou a
+              haver uma pequena defasagem entre o tempo indicado pelo
+              timecode e o "tempo real" dos programas produzidos em
+              NTSC.<br>
+              <br>
+              - Esta defasagem é mínima, quase inexistente para
+              programas curtos (menos de 1 frame para um comercial de 30
+              segundos), mas já perceptível em programas de duração
+              média (chega a 1 segundo num curta-metragem de 17 minutos)
+              e problemática em programas longos (7 segundos num
+              longa-metragem de 2 horas).<br>
+              <br>
+              - Para evitar que esta diferença fosse se acumulando
+              durante a programação, as emissoras de tv tiveram que
+              inventar um novo sistema de timecode - o qual, mesmo
+              utilizando apenas números inteiros, pudesse compensar a
+              diferença entre os 30 qps "ideais" e os 29,97 qps "reais".<br>
+              <br>
+              - O que faz o timecode "drop frame":<br>
+              <br>
+              (a) A cada minuto inteiro transcorrido (1800 frames), ele
+              elimina da contagem ("drop") dois frames: ou seja, depois
+              do 00:00:59;29 vem o 00:01:00;02. Não existem os frames
+              00:01:00;00 e 00:01:00;01. <br>
+              <br>
+              (b) Evidentemente, ele faz o mesmo quando chegar em 2
+              minutos, em 3 minutos, em 4 minutos, etc.<br>
+              <br>
+              (c) Mas, a cada 10 minutos transcorridos, ele deixa de
+              fazer o que tinha feito nos 9 anteriores, contando todos
+              os frames normalmente: 00:09:59;29 / 00:10:00;00 /
+              00:10:00;01 / 00:10:00;02.<br>
+              <br>
+              (d) Ou seja, ao final de cada ciclo de 10 minutos (18000
+              frames), o sistema "drop frame" eliminou da contagem 2 x 9
+              = 18 frames. Um para cada mil, ou 0,1%. Compensou
+              exatamente a diferença entre os 30 qps e os 29,97 qps.<br>
+              <br>
+              Mas ATENÇÃO: o "drop frame" não elimina nenhum frame que
+              foi filmado! Ele elimina apenas números de uma sequência
+              de contagem desses frames.<br>
+              <br>
+              Imagine duas cópias de um mesmo programa de 20 minutos
+              (36000 frames), um deles com timecode DF ("drop frame") e
+              o outro em NDF ("non-drop frame"). Os dois terão os mesmos
+              36000 frames. Só que o NDF vai chamar o último frame de
+              00:20:00:00. E o DF vai chamar de 00:20:01;06. A diferença
+              são os 36 números que o DF não contou.<br>
+              <br>
+              Note que, para se diferençar do NDF, o timecode DF separa
+              os segundos dos frames com um sinal de ponto e vírgula (;)
+              em vez do dois pontos (:):<br>
+              <br>
+              HH:MM:SS;FF<br>
+              <br>
+              Para deixar mais claro que se trata de Drop Frame, alguns
+              programas trocam todos os sinais de separação por ponto e
+              vírgula (é o caso do Adobe Première):<br>
+              <br>
+              HH;MM;SS;FF<br>
+              <br>
+              O NDF te dá o número exato de frames: 36000. O DF "pensa"
+              que o programa tem 36 frames a mais.<br>
+              <br>
+              Em compensação, o DF te dá a duração exata do programa em
+              NTSC: como a cadência é um pouco menor do que 30 qps,
+              36000 frames dá um pouco mais do que 20 minutos.<br>
+              <br>
+              Concluindo: como o DF dá a duração exata, ele deve ser
+              usado preferencialmente na cópia final do programa que vai
+              para a emissora de televisão; como o NDF dá o número exato
+              de frames, ele é melhor para a montagem (mas, para isso,
+              ele tem que ser usado já na filmagem).<br>
+              <br>
+              Ou seja: filmar em NDF, montar em NDF; na hora de fazer a
+              cópia final para a emissora de televisão, copiar em DF.<br>
+              <br>
+              E um detalhe importante: só existe DF (e portanto NDF) no
+              sistema NTSC, por causa da diferença entre os 30 qps e os
+              29.97 qps.<br>
+              <br>
+              PÉROLAS DA TRADUÇÃO: a atual versão em português do Adobe
+              Première, de forma lamentável, resolveu chamar Drop Frame
+              de "timecode de quadro" e Non-drop Frame de (acreditem)
+              "timecode que não de quadro".<br>
+              <br>
+              5. SETAGEM DO TIMECODE<br>
+              <br>
+              Durante a captação da imagem eletrônica (processo cada vez
+              mais chamado simplificadamente de "filmagem"), a câmara
+              gera o timecode, associando cada imagem registrada a um
+              número. Mas qual timecode?<br>
+              <br>
+              O formato do timecode gerado depende da cadência do
+              sistema de vídeo. Se for PAL ou SECAM,&nbsp; o timecode
+              será setado automaticamente para o formato 25 qps. Se o
+              fotógrafo optou por rodar a 24 qps (para transferir para
+              filme, ou para parecer filme), o timecode terá o formato
+              correspondente. Mas, se a filmagem for em NTSC, o
+              fotógrafo deverá optar entre um timecode 30 qps NDF e um
+              timecode 30 qps DF.<br>
+              <br>
+              Mas ainda existe outra questão na setagem do timecode.<br>
+              <br>
+              <br>
+              6. MODO DE GERAÇÃO DO TIMECODE<br>
+              <br>
+              "record run", "free run", "zero run"<br>
+              <br>
+              Gerar timecode em "record run" (às vezes abreviado para
+              "rec run") significa que, cada vez que a câmara for
+              acionada, ela vai retomar o timecode exatamente onde ele
+              havia parado na vez anterior. Ou seja, se o último frame
+              registrado tinha o timecode, digamos, 07:12:29:14, a
+              câmara vai começar a próxima gravação em 07:12:29:15,
+              independentemente do tempo que tenha transcorrido entre
+              uma filmagem e outra.<br>
+              <br>
+              Gerar timecode em "Free run" significa que o timecode
+              continua sendo atualizado mesmo quando a câmara está
+              desligada. Ou seja, se o último frame registrado tinha o
+              tc 07:12:29:14 e se passaram exatos 15 minutos entre uma
+              filmagem e outra, o primeiro frame do novo plano vai ter
+              timecode 07:27:29:15.<br>
+              <br>
+              Com o uso de cartões para gravação, tornou-se mais comum
+              um terceiro modo de geração, em que o timecode recomeça do
+              zero a cada novo arquivo gravado ("zero run").<br>
+              <br>
+              Vantagens do "rec run":<br>
+              - a fita (ou o dispositivo que a substitui) vai ter
+              timecode contínuo.<br>
+              - a captura do material vai ser simplificada.<br>
+              - não é necessário "pre-roll": os primeiros frames
+              gravados já estão valendo.<br>
+              - o material pode ser organizado por timecode.<br>
+              - pouca probabilidade de timecode duplicado no material.<br>
+              <br>
+              Vantagens do "free run":<br>
+              - câmara e gravador de som podem trabalhar com o mesmo
+              timecode (graças a um aparelho <a href="tc-gen.jpg">gerador
+
+
+
+
+
+
+
+
+
+
+
+
+
+                de timecode</a>), facilitando a sincronização posterior.<br>
+              - uma <a href="claq-ipad.jpg">claquete digital</a> (ou
+              mesmo uma <a href="claq-ele.jpg">claquete eletrônica</a>)
+              também pode gerar o mesmo timecode, diminuindo a
+              probabilidade de erro.<br>
+              - várias câmaras podem trabalhar com o mesmo timecode, o
+              que é fundamental para a cobertura de eventos em
+              "multicâmara sem suíte".<br>
+              <br>
+              Algumas câmaras mais recentes (caso da Red) gravam sempre
+              dois timecodes simultâneos:<br>
+              - AC (absolute timecode) em "free run"<br>
+              - EC (edge timecode) em "rec run"<br>
+              <br>
+              Mas algumas câmaras DSLR só têm a opção "zero run".<br>
+              <br>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <span style="font-weight: bold;"><br>
+      </span><br>
+      <span style="font-weight: bold;"></span><span
+        style="text-decoration: underline;"></span></div>
+  </body>
+</html>

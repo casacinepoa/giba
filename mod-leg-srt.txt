@@ -1,0 +1,65 @@
+ANTES QUE O MUNDO ACABE
+LEGENDAS EM ESPANHOL - FORMATO SRT
+07/06/2010
+
+
+1
+00:01:01,666 --> 00:01:03,866
+Los osos negros
+están desapareciendo.
+
+2
+00:01:04,500 --> 00:01:07,100
+Viven en Tailandia
+y desaparecen
+
+3
+00:01:07,433 --> 00:01:10,599
+pues les usan la bejiga
+para hacer remedios.
+
+4
+00:01:10,766 --> 00:01:14,566
+En Tailandia hay otros
+animales desapareciendo,
+
+5
+00:01:15,233 --> 00:01:17,566
+como los tigres, leopardos
+y elefantes.
+
+6
+00:01:18,766 --> 00:01:22,167
+Tailandia es un país de Asia.
+Casi nadie lo conocía,
+
+7
+00:01:22,333 --> 00:01:24,233
+hasta que sucedió el tsunami.
+
+
+8
+00:01:24,400 --> 00:01:28,866
+El cocó del elefante es muy grande
+y como allí hay muchos turistas
+
+9
+00:01:29,33 --> 00:01:32,67
+los guías les enseñaron
+a hacerlo en el water.
+
+10
+00:01:32,233 --> 00:01:33,666
+Lo aprendieron perfecto,
+
+
+CÓDIGOS DE FORMATO
+
+<b> Texto </b> Negrito
+
+<i> Texto </i> Itálico
+
+<u> Texto </u> Sublinhado
+
+<font color=#RRGGBB> Texto </font> Cor
+

@@ -1,0 +1,27 @@
+$FontName = Verdana
+$FontSize = 26
+$ColorIndex1 = 7
+$HorzAlign = center
+$Xoffset = 0
+00:01:01:18 , 00:01:03:24 , The black bears are disappearing.
+00:01:04:13 , 00:01:07:01 , They live in Thailand | and are endangered
+00:01:07:11 , 00:01:10:16 , because people use their | bladder to make medicines.
+00:01:10:21 , 00:01:14:15 , In Thailand there are other | animals that are disappearing,
+00:01:15:05 , 00:01:17:15 , like tigers, leopards | and elephants.
+00:01:18:21 , 00:01:22:03 , Thailand is a country in Asia | that very few people knew,
+00:01:22:08 , 00:01:24:05 , until the Tsunami happened there.
+00:01:24:10 , 00:01:28:24 , Elephant pooh is very big. There | are many tourists in Thailand.
+00:01:28:29 , 00:01:32:00 , So the guides taught the elephants | to use toilets.
+00:01:32:05 , 00:01:33:18 , They do it very well.
+
+
+CÓDIGOS DE FORMATAÇÃO
+
+$Bold = True
+Linha completa começando pelo timecode
+$Bold = False
+
+$Italic = True
+Linha completa começando pelo timecode
+$Italic = False
+

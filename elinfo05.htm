@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <meta name="Author" content="Giba Assis Brasil">
+    <meta name="GENERATOR" content="Mozilla/4.51 [pt] (WinNT; I)
+      [Netscape]">
+    <title>ELEMENTOS INFO: COMPRESSAO</title>
+  </head>
+  <body bgcolor="#ccffff" link="#3333ff" text="#000000" vlink="#3333ff"
+    alink="#3333ff">
+    <blockquote><b><font size="+1">UNISINOS / CRAV - CURSO DE REALIZAÇÃO
+          AUDIOVISUAL</font></b> <br>
+      <b><font size="+1">ESPECIALIDADE EM MONTAGEM I - 2020</font></b><br>
+      <b><font size="+1">Prof. GIBA ASSIS BRASIL <br>
+          <br>
+          <br>
+        </font></b>
+      <table style="width: 600px; text-align: left;" border="0"
+        cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">ELEMENTOS DE INFORMÁTICA PARA MONTADORES</span><br>
+              <span style="font-weight: bold;"></span>
+              <p><span style="font-weight: bold;">6. COMPRESSÃO</span><br>
+                <br>
+                Boa parte da informação armazenada na memória dos
+                computadores (como texto, imagem, som, etc.) é
+                redundante, ou seja, possui elementos repetidos. Por
+                isso, tornou-se importante encontrar formas de
+                comprimi-la, para que ocupem menos espaço de memória.<br>
+                <br>
+                Por exemplo, a seqüência de caracteres abaixo ocupa 40
+                bytes de memória:<br>
+                <br>
+                <big>AAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBCCCCC</big><br>
+                <br>
+                Mas ela pode ser simplificada da seguinte forma,
+                ocupando apenas 8 caracteres (8 bytes):<br>
+                <br>
+                <big>20A15B5C</big><br>
+                <br>
+                É claro que, no exemplo acima, a seqüência de caracteres
+                original tinha um "grau de redundância" muito grande, e
+                por isso não foi difícil compactá-la em 80% (já que 8 é
+                20% de 40). Quanto maior for a repetição de elementos em
+                um arquivo, mais facilmente ele pode ser compactado.<br>
+                <br>
+                Como comprimir o arquivo abaixo?<br>
+                <br>
+                <big>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</big><br>
+                <br>
+                Não é impossível, mas a técnica terá que ser diferente
+                da utilizada no exemplo anterior. E certamente não
+                conseguirá uma taxa de compressão tão alta.<br>
+                <br>
+              </p>
+              <p>6.1. ALGORITMOS E CODECS<br>
+              </p>
+              <p>Técnicas de compressão são algoritmos, no caso:
+                programas que analisam um conjunto de dados e realizam
+                uma série de operações matemáticas para diminuir o
+                espaço de memória que eles ocupam - eliminando
+                redundâncias ou desconsiderando algumas informações
+                menos importantes.<br>
+              </p>
+              <p>Para utilizar um arquivo em forma compactada, são
+                necessárias duas coisas: um algoritmo de codificação
+                (compressão) da informação no momento de salvá-la na
+                memória; e um algoritmo compatível de decodificação
+                (descompressão) na hora de recuperá-la, abrindo o
+                arquivo para uso. Estes dois processos normalmente são
+                desempenhados por um programa de
+                compressão-descompressão como o Winzip ou o Arj, ou
+                ainda (no caso de imagens em movimento) por uma série de
+                programas genericamente chamados de CODECs (ou
+                codificadores/ decodificadores).<br>
+                <br>
+                Outra conseqüência da compressão: um arquivo compactado
+                que esteja armazenado na memória de um computador não
+                está "pronto" para ser usado: ele precisa ser
+                descompactado antes do uso; por isso, ele leva mais
+                tempo para abrir (e também para salvar) do que um
+                arquivo não compactado (embora essas diferenças de tempo
+                muitas vezes possam ser imperceptíveis).<br>
+              </p>
+              <p><br>
+                6.2. COMPRESSÃO COM PERDA E SEM PERDA</p>
+              <p>Comprimir um arquivo de imagem pode ser mais complexo
+                do que comprimir um arquivo de texto. Por exemplo, uma
+                série de 20 pixeis azuis ("azul", "azul", "azul", etc.)
+                pode ser codificada como o equivalente a "20azuis". Mas,
+                no sistema true-color, estes azuis podem não ser
+                exatamente iguais. Uma série como "azul255", "azul254",
+                "azul254", "azul255", "azul255" pode ser comprimida como
+                "5azuis255". E o resultado final, o arquivo aberto
+                depois do processo de codificação/ decodificação, será
+                levemente diferente do original, ainda que a diferença
+                dificilmente seja perceptível.<br>
+                <br>
+                Pode-se falar, então, em dois tipos de compressão: com
+                perda ("lossy compression") e sem perda ("lossless
+                compression"). Ambas têm como objetivo diminuir o espaço
+                de memória necessário para armazenar um arquivo. Mas o
+                arquivo final pode ser um "clone absoluto" do original
+                (se a compressão for sem perda) ou uma cópia
+                ligeiramente modificada (na compressão com perda).<br>
+              </p>
+              <p><br>
+                6.3. COMPRESSÃO DE ARQUIVOS DE TEXTO</p>
+              <p>Arquivos de texto, assim como arquivos de programas
+                (instruções executáveis) só podem sofrer compressão SEM
+                PERDA, caso contrário se tornam inúteis.<br>
+              </p>
+              <p><br>
+                6.4. COMPRESSÃO DE ARQUIVOS DE IMAGEM</p>
+              <p>Para lidar com imagens, criam-se diferentes "algoritmos
+                de compressão", ou seja, diferentes séries de instruções
+                condicionais utilizadas para obter a maior compressão
+                possível com a menor perda aceitável para cada imagem
+                particular.<br>
+              </p>
+              <p>BMP - É o arquivo de imagem bitmap sem compressão.<br>
+              </p>
+              <p>RAW ("arquivo cru" ou "negativo digital") - É o arquivo
+                recém gerado por uma câmara ou escâner digital, sem
+                compressão, mas também ainda não processado como BMP;
+                cada câmara trabalha com um formato RAW específico.<br>
+              </p>
+              <p>TGA (Truevision Graphics Adapter) - É um formato de
+                imagem comprimida, mas sem perda, o que é obtido por um
+                algoritmo de mapeamento de cores.<br>
+              </p>
+              <p>TIF ou TIFF (Tagged Image File Format) - Outro formato
+                de compressão de imagem sem perda.<br>
+              </p>
+              <p>JPG ou JPEG (Joint Photographic Expert Group) - É o
+                algoritmo mais utilizado para comprimir imagens BMP.
+                Trabalha com "true color" (24 bits por pixel) e tem
+                perda de qualidade regulável.<br>
+              </p>
+              <p>GIF (Graphics Interchange Format) - É outro algoritmo
+                para comprimir imagens BMP. Trabalha com "high color" (8
+                bits por pixel), mas as 256 cores possíveis variam para
+                cada arquivo.<br>
+              </p>
+              <p>PNG (Portable Network Graphics) - É um formato surgido
+                em 1996, que aceita compressão sem perda e canal alfa
+                (transparência) sem serrilhamento.<br>
+              </p>
+              <p>PDF (Portable Document File) - É um arquivo misto
+                (imagem + texto) gerado na interface entre um programa e
+                uma impressora, em que as partes de imagem são
+                vetoriais, o texto é preservado juntamente com a fonte
+                correspondente, e que antes de ser salvo é comprimido
+                por uma tecnologia específica, chamada PostScript.<br>
+              </p>
+              <p><br>
+                6.5. COMPRESSÃO DE ARQUIVOS DE SOM<br>
+              </p>
+              <p>Para a compressão de arquivos de som, os algoritmos
+                utilizados levam em consideração princípios de
+                psicoacústica, a ciência que estuda a subjetividade da
+                percepção humana de sons. Ou seja: faixas de freqüência
+                ou variações de freqüência menos percebidas pela nossa
+                audição são eliminadas ou simplificadas, ocupando menos
+                espaço de memória.<br>
+              </p>
+              <p>PCM (Pulse Code Modulation): codificação de som sem
+                compressão.<br>
+                AIF (Audio Interchange Format): sem compressão,
+                compatível com Macintosh.<br>
+                WAV (Waveform audio format): sem compressão, compatível
+                com Windows.<br>
+                BWF (Broadcast Wave Format): sem compressão, padronizado
+                para transporte entre diferentes plataformas.<br>
+              </p>
+              <p>MP3 (MPEG-1, audio layer 3), WMA (Windows Media Audio),
+                RAM (Real Audio Media), AAC (MPEG-4 Advanced Audio
+                Coding): diferentes formatos para compressão de arquivos
+                de som, com índices de compressão e qualidade variável.<br>
+              </p>
+              <p>SIL (Silk) é um codec de som desenvolvido pela Skype
+                (2009), e desde 2011 pertencente à Microsoft, que usa um
+                algoritmo de previsão linear (Linear Prediction Code ou
+                LPC), otimizado para o som da fala humana.<br>
+              </p>
+              <p>FLAC (Free Lossless Audio Codec) é um codec de
+                compressão de som sem perda, desenvolvido em código
+                aberto pela Fundação Xiph.org. </p>
+              <p>*****</p>
+              <p>Cada segundo de som não comprimido (AIF ou WAV),
+                stereo, com taxa de amostragem de 48 kHz e profundidade
+                16 bits ocupa:<br>
+                2 (canais) x 48.000 x 16 = 1536 kb/s ou 192 kB/s<br>
+              </p>
+              <p>O mesmo segundo de som em MP3, dependendo da taxa de
+                compressão utilizada, pode ocupar apenas 192 kb (um
+                oitavo do tamanho do arquivo original) ou até menos do
+                que isso.<br>
+              </p>
+              ***<br>
+              <br>
+              6.6. CÁLCULO DE TAMANHO DE ARQUIVOS DE SOM<br>
+              <br>
+              A fórmula de cálculo para o tamanho de um arquivo de som
+              comprimido seria:<br>
+              <br>
+              <font color="#3333ff">arq = (amo x prf x dur x can) / txc</font><br>
+              <br>
+              - amo é a taxa de amostragem, em Hz (44100, 48000, etc.)<br>
+              - prf é a profundidade da amostra. ATENÇÃO: normalmente
+              ela é fornecida em bits; como queremos o tamanho do
+              arquivo em bytes, ela tem que ser dividida por 8<br>
+              - dur é a duração do arquivo em segundos<br>
+              - can é o número de canais (1 para mono, 2 para stereo,
+              5.1, etc.)<br>
+              - txc é a taxa de compressão (2 vezes, 3 vezes, 5 vezes)<br>
+              <br>
+              Às vezes a taxa de compressão é fornecida em cálculo
+              invertido, como porcentagem. Por exemplo, "comprimido a
+              20%" em vez de "comprimido 5 vezes". Nesse caso, o
+              percentual de compressão deve ser multiplicado pelo
+              tamanho de arquivo, e não dividido.<br>
+              <br>
+              Muitos arquivos de som comprimido são identificados pela
+              sua taxa de bits (bitrate ou br), que já leva em conta a
+              amostragem, a profundidade, os canais e a compressão:<br>
+              <br>
+              <font color="#3333ff">br = (amo x prf x can) / txc</font><br>
+              <br>
+              Para saber o tamanho de um arquivo tendo a taxa de bits,
+              basta multiplicar pela duração:<br>
+              <br>
+              <font color="#3333ff">arq = br x dur</font><br>
+              <br>
+              <span style="font-weight: bold;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <b><font size="+1"><br>
+        </font></b><big style="font-weight: bold;"><br>
+      </big></blockquote>
+  </body>
+</html>

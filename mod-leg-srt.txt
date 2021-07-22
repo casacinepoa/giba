@@ -6,7 +6,7 @@ LEGENDAS EM ESPANHOL - FORMATO SRT
 1
 00:01:01,666 --> 00:01:03,866
 Los osos negros
-están desapareciendo.
+estÃ¡n desapareciendo.
 
 2
 00:01:04,500 --> 00:01:07,100
@@ -30,22 +30,22 @@ y elefantes.
 
 6
 00:01:18,766 --> 00:01:22,167
-Tailandia es un país de Asia.
-Casi nadie lo conocía,
+Tailandia es un paÃ­s de Asia.
+Casi nadie lo conocÃ­a,
 
 7
 00:01:22,333 --> 00:01:24,233
-hasta que sucedió el tsunami.
+hasta que sucediÃ³ el tsunami.
 
 
 8
 00:01:24,400 --> 00:01:28,866
-El cocó del elefante es muy grande
-y como allí hay muchos turistas
+El cocÃ³ del elefante es muy grande
+y como allÃ­ hay muchos turistas
 
 9
 00:01:29,33 --> 00:01:32,67
-los guías les enseñaron
+los guÃ­as les enseÃ±aron
 a hacerlo en el water.
 
 10
@@ -53,11 +53,11 @@ a hacerlo en el water.
 Lo aprendieron perfecto,
 
 
-CÓDIGOS DE FORMATO
+CÃ“DIGOS DE FORMATO
 
 <b> Texto </b> Negrito
 
-<i> Texto </i> Itálico
+<i> Texto </i> ItÃ¡lico
 
 <u> Texto </u> Sublinhado
 

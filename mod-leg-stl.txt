@@ -15,13 +15,13 @@ $Xoffset = 0
 00:01:32:05 , 00:01:33:18 , They do it very well.
 
 
-CÓDIGOS DE FORMATAÇÃO
+CÃ“DIGOS DE FORMATAÃ‡ÃƒO
 
 $Bold = True
-Linha completa começando pelo timecode
+Linha completa comeÃ§ando pelo timecode
 $Bold = False
 
 $Italic = True
-Linha completa começando pelo timecode
+Linha completa comeÃ§ando pelo timecode
 $Italic = False
 

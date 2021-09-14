@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Author" content="Giba Assis Brasil">
+    <meta name="GENERATOR" content="Mozilla/4.51 [pt] (WinNT; I)
+      [Netscape]">
+    <title>PRIMEIRO CORTE</title>
+  </head>
+  <body link="#0000ff" bgcolor="#ccffff" alink="#ff0000" text="#000000"
+    vlink="#0000ff">
+    <div style="margin-left: 40px;"> <b><font size="+1">UNISINOS / CRAV
+          - CURSO DE REALIZAÇÃO AUDIOVISUAL</font></b> <br>
+      <b><font size="+1">ESPECIALIDADE EM MONTAGEM II - 2021</font></b><br>
+      <b><font size="+1">Prof. GIBA ASSIS BRASIL</font></b> <br>
+      <br>
+      &nbsp;<br>
+      <table style="width: 660px; text-align: left;" cellspacing="0"
+        cellpadding="5" border="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><b>FLUXO DE PÓS-PRODUÇÃO
+                CRAV</b><b><br>
+              </b>ProRes422HQ - ProResProxy - ProRes422HQ<br>
+              via DaVinci Resolve<br>
+              (Prof. Milton do Prado)<br>
+              <br>
+              <br>
+              - Criar novo projeto com o NOME DO FILME (atenção: o
+              DaVinci tem um sistema de gerenciamento interno de
+              projeto. Se vocês quiserem, ao final do dia, salvar esse
+              projeto para ser usado em outra máquina vocês têm que
+              EXPORTAR o projeto - isso mesmo. Parece esquisito, mas não
+              é muito).<br>
+              <br>
+              - Em geral, quando importamos o material do filme para
+              dentro do DaVinci, ele adapta os parâmetros do projeto aos
+              do filme. MAS, por via das dúvidas, podem fazer
+              manualmente: abrir os parâmetros de configuração do
+              projeto (FILE &gt; Project Settings) e configurar da
+              seguinte maneira:<br>
+              <br>
+              MASTER SETTINGS:<br>
+              - Timeline Resolution: Idêntico ao formato de entrega do
+              filme (1920x1080 HD)<br>
+              - Timeline Frame Rate: Idêntico ao do material bruto
+              (preferencialmente 23.976fps)<br>
+              - Playback Frame Rate: Idêntico ao do material bruto
+              (preferencialmente 23.976fps)<br>
+              <br>
+              IMAGE SCALING:<br>
+              - INPUT SCALING: "Scale entire image to fit"<br>
+              - OUTPUT SCALING: Clicar em "Match Timeline settings"<br>
+              - MISMATCHED RESOLUTION FILES: "Scale entire image to fit"<br>
+              <br>
+              GENERAL OPTIONS&gt; CONFORM OPTIONS:<br>
+              - Use Timecode: "Embedded in source clip"<br>
+              - Assist using reel names from the: "Source clip filename"<br>
+              <br>
+              - Importar o material via ambiente MEDIA e organizar em
+              bins (uma pasta para cada cartão filmado, e estes cartões
+              dentro das pastas de diárias)<br>
+              <br>
+              - No menu Workspace&gt;Data Burn-in, selecionar a aba
+              "Project" e ativar as opções "Source Timecode", "Source
+              Clip Name" e "Date" - e organizá-los sobre a imagem como
+              melhor convier. Sugiro lá embaixo, quase na beirada.<br>
+              <br>
+              ***<br>
+              <br>
+              PARA CADA DIÁRIA/CARTÃO:<br>
+              <br>
+              - No ambiente EDIT, para cada um dos cartões, (Exemplo:
+              Dia 01&gt;CAM01), entrar na pasta, selecionar todos os
+              clips, clicar com o botão direito do mouse e escolher
+              "Create New Timeline Using Selected Clips" e nomear o
+              timeline "preparaproxyDxxCyy" (onde D é o n˚ da diária e C
+              é o número do cartão). Sim, é uma timeline para cada
+              diária/cartão.<br>
+              <br>
+              - Os filmes do CRAV serão filmados em espaço de cor REC
+              709. Então não precisamos aplicar uma LUT (ou Look Up
+              Tables, que são correções de cor "pré-prontas", só para a
+              montagem). Só se aplicam LUT se usarmos LOG na filmagem
+              (LOG é uma imagem captada com baixíssimo contraste) OU se
+              por razões estéticas já se deseja mudar o visual do filme,
+              provisoriamente, já na montagem.<br>
+              <br>
+              - COMO APLICAR A LUT: No ambiente COLOR, no espaço NODES,
+              criar um novo node (ALT+S ou Option+S no mac), que vai
+              aparecer do lado do Node pré existente (cada clipe já tem
+              um node original). Como o botão direito do mouse em cima
+              deste novo node, aplicar uma LUT específica (você também
+              pode mexer nas opções de contraste, gamma, ganho etc, lá
+              embaixo, ou deixar só o LUT escolhido). Ao chegar no
+              visual que você quis, clique CMD + Option + G (ou
+              CTRL+ALT+G no PC) e vai aparecer um clipe na parte
+              esquerda, com a cor modificada, que será sua GRADE.
+              Selecione todos os Clipes que aparecem em cima da
+              timeline, depois clique com o botão direito do mouse em
+              cima da Grade e Aplly Grade. Pronto, o visual novo (LUT ou
+              não) foi aplicado a todos os clipes da timeline.<br>
+              LEMBRANDO: todo este passo é opcional se o material está
+              sendo filmado em REC 709.<br>
+              <br>
+              - No ambiente DELIVER, customizar os render settings:<br>
+              <br>
+              RENDER:<br>
+              - "Individual Clips"<br>
+              <br>
+              VIDEO:<br>
+              - Format: QuickTime<br>
+              - Codec: Apple ProRes<br>
+              - Type: Apple ProRes422Proxy<br>
+              - Resolution: 1920x1080 HD<br>
+              <br>
+              ADVANCED SETTINGS:<br>
+              - DATA BURN-IN: "Same as Project" (não mexer em nenhum
+              outro item dos Advanced Settings)<br>
+              <br>
+              AUDIO:<br>
+              - Codec: Linear PCM<br>
+              - Channels: Same as Source<br>
+              - Bit Depth: 16<br>
+              <br>
+              FILE:<br>
+              - Filename uses: Source Name<br>
+              <br>
+              Em LOCATION, lá em cima, escolher ou criar a pasta,
+              tentando criar uma "árvore" semelhante à das brutas<br>
+              - Clicar ADD TO RENDER QUEUE e repetir para cada um dos
+              timelines (uma para cada Cartão). Clicar RENDER (um job
+              por vez, por segurança; ou todos de vez)<br>
+              <br>
+              ***<br>
+              <br>
+              ESTRUTURA SUGERIDA PARA ORGANIZAR O MATERIAL NO HD DO
+              MONTADOR<br>
+              tudo que está em negrito é o nome de uma pasta; evitem
+              sinais, acentos e mesmo espaços:<br>
+              <br>
+              Astronauta_Azul (isso é um exemplo, para deixar claro que
+              é UMA PASTA DIFERENTE PARA CADA FILME):<br>
+              &gt; 01_Brutas<br>
+              &gt;&gt; Dia01_cartao_01<br>
+              &gt;&gt;&gt; Imagem<br>
+              &gt;&gt;&gt; Som<br>
+              &gt;&gt; Dia01_cartao_02 (e assim sucessivamente)<br>
+              &gt; 02_Proxies (é para aqui que virão os Proxies gerados
+              no DaVinci, e dentro dele as pastas seguindo a mesma
+              lógica da "árvore" das Brutas)<br>
+              &gt; 03_Projetos (coloquem aqui o projeto do DaVinci,
+              lembrando que tem que exportar ao final do dia de
+              trabalho, e os do Premiere, no caso de montar em Premiere)<br>
+              &gt; 04_Roteiros e Planilhas<br>
+              &gt; 05_Material Adicional (fotos, cartões, referências
+              etc)<br>
+              &gt; 06_Músicas (e dentro, pastas diferentes de músicas de
+              referência e originais, se houver)<br>
+              &gt; 07_Logos, cartões, vinhetas (como os do CRAV, plano 9
+              etc)<br>
+              &gt; 08_Finalizacao<br>
+              &gt;&gt; Export (tudo que vocês exportarem, para
+              visualização ou para finalização, devidamente
+              identificado)<br>
+              &gt;&gt; Import (tudo que for enviado para vocês,
+              incluindo aí o mov final com cor corrigida e os bounces de
+              som - convém separar imagem e som em outras pastas aqui
+              dentro).<br>
+              <br>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <span style="font-weight: bold;"></span><br>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Author" content="Giba Assis Brasil">
+    <meta name="GENERATOR" content="Mozilla/4.51 [pt] (WinNT; I)
+      [Netscape]">
+    <title>PRIMEIRO CORTE</title>
+  </head>
+  <body link="#0000ff" bgcolor="#ccffff" alink="#ff0000" text="#000000"
+    vlink="#0000ff">
+    <div style="margin-left: 40px;"> <b><font size="+1">UNISINOS / CRAV
+          - CURSO DE REALIZAÇÃO AUDIOVISUAL</font></b> <br>
+      <b><font size="+1">ESPECIALIDADE EM MONTAGEM II - 2021</font></b><br>
+      <b><font size="+1">Prof. GIBA ASSIS BRASIL</font></b> <br>
+      <br>
+      &nbsp;<br>
+      <table style="width: 660px; text-align: left;" cellspacing="0"
+        cellpadding="5" border="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><b>FLUXO DE PÓS-PRODUÇÃO
+                CRAV</b><b> - PARTE 2:<br>
+              </b><i>Como reconectar um material montado em Proxy à
+                mídia original no DaVinci</i><i><br>
+              </i>(Prof. Milton do Prado)<br>
+              <br>
+              <br>
+              No caso dos filmes feitos pela turma 2018 do CRAV em 2021,
+              o material original está em Apple ProRess 422 HQ,
+              convertido para Proxy no DaVinci, conforme instruções
+              passadas anteriormente. As instruções que vamos passar
+              agora, no entanto, pode ser seguida para material original
+              em RAW, ou outros formatos com compressão temporal, com as
+              devidas observações colocadas quando for o caso. Mesmo
+              neste caso, se a conversão original foi feita no DaVinci,
+              todo o processo fica mais fácil, pois nossas instruções
+              estão prevendo que o processo de correção de cor vai ser
+              feito neste software.<br>
+              <br>
+              O objetivo principal deste documento, então, é orientar
+              como reconectar um material montado em proxy (ou em LT) à
+              mídia original no DaVinci resolve.<br>
+              <br>
+              1. Se o filme foi editado no Adobe Premiere.<br>
+              <br>
+              - Após determinado o corte final, duplique-o em uma
+              sequência FilmeX_FINALIZAÇÃO, onde:<br>
+              <br>
+              a) as pistas de imagem e de som devem estar organizadas e
+              no menor número possível;<br>
+              <br>
+              b) os planos que tenham qualquer efeito aplicado (de
+              velocidade, reenquadramento, fusões etc) ou crédito
+              sobreposto deve ser colocado "limpo", sem o efeito, depois
+              do bip de fim, ou exportado separadamente.<br>
+              <br>
+              A Post Frontier ainda sugere, depois disso, que se
+              duplique essa timeline FilmeX_FINALIZAÇÃO e deixe uma só
+              com as pistas de imagem e outra só com as pistas de som.
+              Esta operação, segundo eles, diminui os riscos de erro.
+              Então vamos fazer isto, criar uma TL
+              FilmeX_FINALIZACAO_Imagem e outra FilmeX_FINALIZACAO_som.<br>
+              <br>
+              - Selecione a timeline final de imagem e exporte um XML.<br>
+              <br>
+              - Além disso, exporte também um vídeo guia. Pode ser em
+              mp4 H264, 15mpbs, 2pass.<br>
+              <br>
+              - Já no DaVinci, abra o projeto que originou os proxies
+              (se não tiver esse projeto, veja o&nbsp; ao final deste
+              ítem).<br>
+              <br>
+              - No ambiente MEDIA, importe o XML (File &gt; Import &gt;
+              Timeline) - ATENÇÃO, não importe via "media from XML...".
+              Selecione o XML da timeline exportada do Premiere.<br>
+              <br>
+              - Na caixa de opções que se abre:<br>
+              <br>
+              - coloque o nome da Timeline que tu quer (se não vier o
+              nome correto do XML);<br>
+              <br>
+              - NÃO deixe marcada nenhuma das opções (por exemplo,
+              Automatically set projetc settings, Automatically import
+              source clips into media pool, Use sizing information etc -
+              nada deve ser selecionado);<br>
+              <br>
+              - clique em ok;<br>
+              <br>
+              - abrirá uma nova caixa, menor, onde você deve selecionar
+              a pasta do projeto onde estão as BRUTAS originais.<br>
+              <br>
+              - Aparecerá uma nova timeline, com ícone XML, pronta para
+              ter a cor corrigida. Verifique os planos com efeitos
+              (sugiro fortemente uma lista de efeitos enviada por
+              escrito) - se for preciso, acesse os planos limpos
+              colocados depois do bip de fim.<br>
+              <br>
+              - Importe também o vídeo de referência, em h624, cuja
+              imagem deve ser colocada numa pista nova em cima da
+              timeline, e a visualização ativada e desativada quando for
+              necessário, para comparar com o plano que está sendo
+              corrigido embaixo. O áudio deste vídeo vai ajudar também à
+              fruição do filme.<br>
+              <br>
+              CASO não se tenha mais o projeto original que criou os
+              proxies, crie um projeto novo no Da Vinci e importe a
+              pasta que contenha as pastas das diárias originais (ou
+              crie uma pasta BRUTAS e coloque as pastas das diárias
+              originais). O resto do processo é praticamente o mesmo.<br>
+              <br>
+              2. Caso a montagem tenha sido feita em Proxy no próprio
+              DaVinci:<br>
+              <br>
+              - Após determinado o corte final, duplique-a em uma
+              sequência FINALIZAÇÃO, onde a) as pistas de imagem e de
+              som devem estar organizadas e no menor número possível;<br>
+              <br>
+              - Os planos em que foram aplicados efeitos pode continuar
+              como estão e trabalhados diretamente para correção de cor.<br>
+              <br>
+              - duplique esta Timeline e chame-a de FilmeX_FINALIZACAO;<br>
+              <br>
+              - selecione todas as imagens da timeline (não selecione
+              nada do som);<br>
+              <br>
+              - com o botão direito, NÃO selecione Conform Lock Enabled;<br>
+              <br>
+              - ainda com as imagens todas selecionadas, clicar na aba
+              Media Pool, escolher a timeline de finalização &gt; botão
+              direito &gt; Timelines &gt; Reconform from Bins.<br>
+              <br>
+              a) Na nova janela, colocar Attenpt to conform Selected
+              Clips (a opção All Clips pode dar problema com o áudio);<br>
+              <br>
+              b) Selecionar Set Clips to conform Lock Enable after
+              conform, assim você "tranca" a timeline nova com o
+              material original;<br>
+              <br>
+              c) Choose Conform Bins: selecione aqui a pasta com as
+              BRUTAS.<br>
+              <br>
+              d) Em Timecode, escolher Source Timecode<br>
+              <br>
+              e) Selecionar a opção File Name<br>
+              <br>
+              o Se o material original tem uma extensão diferente,
+              selecionar LOOOSE File Name. Isso é especialmente útil
+              quando a conversão foi feita de um material bruto com
+              compressão temporal. Se os arquivos originais são .mov,
+              vai ser de pouca utilidade e você pode não selecionar a
+              opção File Name.<br>
+              <br>
+              3. Depois da correção de cor<br>
+              <br>
+              Uma vez feita a correção de cor, deve-se desabilitar a
+              faixa com o filme de referência (caso tenha vindo do
+              Premiere) ou até mesmo apagar.<br>
+              <br>
+              Deve-se então exportar o filme, no ambiente DELIVER:<br>
+              <br>
+              - caso esteja-se trabalhando com um original sem
+              compressão temporal, (como ProRess HQ), deve-se exportar
+              na configuração exata da timeline: mesmo codec, resolução,
+              frame rate etc;<br>
+              <br>
+              - caso esteja-se trabalhando com um original com
+              compressão temporal (como o material que vem das câmeras
+              Sony, por exemplo, ou h264), deve-se exportar em ProRess
+              HQ ou ProRess SD.<br>
+              <br>
+              A imagem exportada do DaVinci deve ser sincronizada com o
+              som vindo do bounce pelo montador, no Premiere ou no
+              DaVinci, em uma nova sequência que vai servir para
+              exportar a matriz do filme e as eventuais cópias de
+              exibição.<br>
+              <br>
+              MATRIZ: deve ser em Apple ProRess 422 HQ (filmes do 3°
+              ano) ou 422 SD (opção para os documentários, por exemplo).<br>
+              <br>
+              CÓPIAS DE EXIBIÇÃO: Sugerimos um MOV ou MP4 com codec 264,
+              15MBps<br>
+              <br>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <span style="font-weight: bold;"></span><br>
+    </div>
+  </body>
+</html>

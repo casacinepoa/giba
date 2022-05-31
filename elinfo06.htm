@@ -244,6 +244,10 @@ de
 
 
 
+
+
+
+
                   cor</a><br>
               </p>
               <p><small style="font-weight: bold;"><small><a
@@ -254,19 +258,24 @@ de
               <p><a name="67"></a>7.7. TÉCNICAS DE COMPRESSÃO DE VÍDEO<br>
               </p>
               <p>(1) Anamorfização: redução do número de pixels
-                armazenados por linha.<br>
+                armazenados por linha (sem alterar a forma da imagem,
+                pela utilização de <a moz-do-not-send="true"
+                  href="anam-px.jpg" target="_blank">"pixels
+                  retangulares"</a>).<br>
               </p>
               <p>(2) Compressão espacial (intraframe): compressão da
-                informação relativa a pixels vizinhos.<br>
+                informação relativa a <a moz-do-not-send="true"
+                  href="jpg-div.jpg" target="_blank">pixels vizinhos</a>.<br>
                 - DCT (Discrete Cosine Transform): algoritmo mais comum
                 para compressão espacial, usado no padrão JPG e também
                 na compressão de arquivos de som (MP3).<br>
                 - Compressão fractal: outro tipo de algoritmo,
                 alternativo ao DCT.<br>
                 <br>
-                (3) Subsampleamento de chroma (chroma subsampling):
-                compressão da informação de cor, cujo grau é indicado
-                por três números em proporção.<br>
+                (3) Subsampleamento de chroma (<a href="chroma-sub.jpg"
+                  target="_blank" moz-do-not-send="true">chroma
+                  subsampling</a>): compressão da informação de cor,
+                cujo grau é indicado por três números em proporção.<br>
                 - 4:4:4 - sem compressão de cor: 4 amostras de Y, 4 de
                 U, 4 de V.<br>
                 - 4:2:2 - amostragem total de luma, mas só mede U e V a
@@ -276,10 +285,12 @@ de
                 seguinte, mede V a cada 2 pixels.<br>
               </p>
               <p>(4) Compressão temporal (interframes): compressão da
-                informação relativa a frames vizinhos. Divide o arquivo
-                em GOPs (groups of pictures); em cada GOP, uma imagem
-                será armazenada integralmente; das demais, armazena-se
-                apenas a diferença em relação à anterior.<br>
+                informação relativa a <a moz-do-not-send="true"
+                  href="ref-frame.jpg" target="_blank">frames vizinhos</a>.
+                Divide o arquivo em GOPs (groups of pictures); em cada <a
+                  moz-do-not-send="true" href="gop.jpg" target="_blank">GOP</a>,
+                uma imagem será armazenada integralmente; das demais,
+                armazena-se apenas a diferença em relação à anterior.<br>
               </p>
               <p><small style="font-weight: bold;"><small><a
                       href="elinfo06.htm#60">ÍNDICE</a><br>
@@ -289,6 +300,7 @@ de
               <p><a name="68"></a>7.8. SISTEMAS DE COMPRESSÃO DE VÍDEO
                 (CODECs)<br>
               </p>
+              <p>/ O MAIS ANTIGO</p>
               <p>M-JPEG (Motion JPEG): É um sistema de compressão em que
                 cada imagem (frame) é comprimida individualmente e
                 armazenada como um arquivo JPEG. Esse sistema utiliza
@@ -297,6 +309,7 @@ de
                 sistemas de montagem digital, consoles como o Play
                 Station, etc.<br>
               </p>
+              <p>/ COM COMPRESSÃO TEMPORAL</p>
               <p>MPEG-1: Foi o primeiro sistema a utilizar, além da
                 INTRAFRAME, também a compressão INTERFRAMES, ou seja,
                 eliminando a redundância que existe entre um frame e
@@ -327,16 +340,24 @@ de
                 parte 10: Especificação ainda mais avançada (2003) do
                 MPEG-4, para lidar com vídeo de alta definição.<br>
               </p>
-              <p>H.265 ou HEVC (High Efficiency Video Coding) ou ainda
-                MPEG-H parte 2: Padrão desenvolvido a partir de 2013 por
-                um consórcio de empresas (entre elas a Technicolor), mas
-                cobrando royalties altíssimos.<br>
+              <p><a href="h265.jpg" target="_blank"
+                  moz-do-not-send="true">H.265 ou HEVC</a> (High
+                Efficiency Video Coding) ou ainda MPEG-H parte 2: Padrão
+                desenvolvido a partir de 2013 por um consórcio de
+                empresas (entre elas a Technicolor), mas que custou a
+                ser implementado por causa do alto custo dos royalties.<br>
               </p>
-              <p>AV1 (Alliance for Open Media Video 1): codec ainda não
-                lançado, mas que está sendo desenvolvido desde 2015 por
-                um consórcio apoiado pelas maiores empresas de
-                tecnologia (Amazon, Google, Intel, Microsoft, Netflix) e
-                que pretende ser 25% mais eficiente que o H.265.<br>
+              <p>H.266 ou VVC (Versatile Video Coding): Novo padrão
+                anunciado em julho de 2020 pela alemã Fraunhofer, em
+                consórcio com vários gigantes da tecnologia (Microsoft,
+                Intel, Sony, etc.)<br>
+              </p>
+              <p>AV1 (Alliance for Open Media Video 1): codec de código
+                aberto desenvolvido desde 2015 por um consórcio apoiado
+                por grandes empresas de tecnologia (Amazon, Google,
+                Intel, Microsoft, Netflix) considerado de 40 a 50% mais
+                eficiente que o H.264, e utilizado desde junho de 2019
+                pelo Vimeo.<br>
               </p>
               <p>/ CODECs "INTRA-ONLY" (sem compressão temporal)<br>
               </p>
@@ -347,6 +368,9 @@ de
               </p>
               <p>ProRes: codec de alta definição (1080 linhas) da Apple,
                 lançado em 2007 com o Final Cut 6.<br>
+              </p>
+              <p>AVC-ultra: codec da Panasonic para montagem em alta
+                definição (2008).<br>
               </p>
               <p>DNxHD: codec de alta definição da Avid (2004).<br>
               </p>
@@ -361,7 +385,8 @@ de
                     <br>
                     <br>
                   </small></small></p>
-              <p><a name="69"></a>7.9. ARQUIVOS <a href="cod-port.jpg">PORTADORES</a>
+              <p><a name="69"></a>7.9. ARQUIVOS <a href="cod-port.jpg"
+                  target="_blank" moz-do-not-send="true">PORTADORES</a>
                 DE VÍDEO<br>
               </p>
               <p>Um portador ("video container") é um formato de vídeo
@@ -415,6 +440,11 @@ de
               <p>/ BDAV (Blu-ray Disc Audio-Video, 2003): arquivo de
                 Blu-ray, com terminação M2TS (variação do MTS), também
                 contendo arquivos de áudio e vídeo.<br>
+              </p>
+              <p>/ DCP (Digital Cinema Package): não é exatamente um
+                "container", mas um pacote de especificações e
+                codificações para conteúdo audiovisual a ser exibido em
+                cinema digital.<br>
               </p>
               <p><small><small>OBS: Na <a target="_blank"
 href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats">Wikipédia</a>

@@ -24,28 +24,53 @@
                 bold;">ELEMENTOS DE INFORMÁTICA PARA MONTADORES</span><br>
               <span style="font-weight: bold;"></span>
               <p><span style="font-weight: bold;">6. COMPRESSÃO</span><br>
-                <br>
-                Boa parte da informação armazenada na memória dos
-                computadores (como texto, imagem, som, etc.) é
-                redundante, ou seja, possui elementos repetidos. Por
-                isso, tornou-se importante encontrar formas de
-                comprimi-la, para que ocupem menos espaço de memória.<br>
-                <br>
-                Por exemplo, a seqüência de caracteres abaixo ocupa 40
-                bytes de memória:<br>
+              </p>
+              <p> Em princípio, quanto maior um arquivo, mais informação
+                ele contém. Mas arquivos muito grandes geram dois
+                problemas:</p>
+              <p>- quando são armazenados, ocupam muito espaço de
+                memória;<br>
+                - quando são transferidos, exigem muito fluxo de rede.<br>
+              </p>
+              <p>Toda a tecnologia de compressão de arquivos surge da
+                necessidade de diminuir os arquivos, abrindo espaços de
+                memória e normalizando fluxos de rede.<br>
+              </p>
+              <p>E a ideia básica da compressão é encontrar, em cada
+                arquivo (de texto, imagem, som, etc.) o que é
+                descartável e o que é redundante.</p>
+              <p> Por exemplo, digamos que a seqüência de caracteres
+                abaixo ocupe 40 bytes de memória:<br>
                 <br>
                 <big>AAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBCCCCC</big><br>
-                <br>
-                Mas ela pode ser simplificada da seguinte forma,
-                ocupando apenas 8 caracteres (8 bytes):<br>
-                <br>
-                <big>20A15B5C</big><br>
-                <br>
-                É claro que, no exemplo acima, a seqüência de caracteres
-                original tinha um "grau de redundância" muito grande, e
-                por isso não foi difícil compactá-la em 80% (já que 8 é
-                20% de 40). Quanto maior for a repetição de elementos em
-                um arquivo, mais facilmente ele pode ser compactado.<br>
+              </p>
+              <p>Se, pra minha interpretação do arquivo, eu considerar
+                que essas repetições são descartáveis, eu posso
+                comprimir a sequência assim:</p>
+              <p>ABC<br>
+                (3 bytes)<br>
+              </p>
+              <p>Se eu considerar que as repetições não são
+                descartáveis, mas são redundantes, eu posso comprimir a
+                sequência dessa forma:<br>
+              </p>
+              <p>20A15B5C<br>
+                (8 bytes)</p>
+              <p> A primeira compressão foi feita "com perda" (lossy):
+                eu nunca vou conseguir recompor a sequência original,
+                mas considero que mantive o essencial da informação do
+                arquivo.<br>
+              </p>
+              <p>A segunda compressão foi "sem perda" (lossless): os
+                números antes de cada letra permitem que eu recomponha
+                exatamente a sequência original.<br>
+              </p>
+              <p>É claro que, no exemplo acima, a seqüência de
+                caracteres original tinha um "grau de redundância" muito
+                grande, e por isso não foi difícil compactá-la em 80%
+                (já que 8 é 20% de 40). Quanto maior for a repetição de
+                elementos em um arquivo, mais facilmente ele pode ser
+                compactado.<br>
                 <br>
                 Como comprimir o arquivo abaixo?<br>
                 <br>

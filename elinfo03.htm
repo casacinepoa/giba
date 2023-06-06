@@ -5,14 +5,14 @@
     <meta name="Author" content="Giba Assis Brasil">
     <meta name="GENERATOR" content="Mozilla/4.51 [pt] (WinNT; I)
       [Netscape]">
-    <title>ELEMENTOS INFO: ARQUIVOS DE IMAGEM</title>
+    <title>ELEMENTOS INFO: ARQUIVOS DE TEXTO</title>
   </head>
-  <body link="#3333ff" bgcolor="#ccffff" alink="#3333ff" text="#000000"
-    vlink="#3333ff">
+  <body vlink="#3333ff" text="#000000" link="#3333ff" bgcolor="#ccffff"
+    alink="#3333ff">
     <blockquote><b><font size="+1">UNISINOS / CRAV - CURSO DE REALIZAÇÃO
           AUDIOVISUAL</font></b> <br>
-      <b><font size="+1">ESPECIALIDADE EM MONTAGEM I - 2022</font></b><br>
-      <b><font size="+1">Prof. GIBA ASSIS BRASIL<br>
+      <b><font size="+1">ESPECIALIDADE EM MONTAGEM I - 20<font size="+1">22<br>
+          </font></font></b><b><font size="+1">Prof. GIBA ASSIS BRASIL<br>
           <br>
           <br>
         </font></b>
@@ -22,229 +22,96 @@
           <tr>
             <td style="vertical-align: top;"><span style="font-weight:
                 bold;">ELEMENTOS DE INFORMÁTICA PARA MONTADORES</span><br>
-              <p> <span style="font-weight: bold;">4. ARQUIVOS DE
-                  IMAGEM</span><br>
+              <p> <span style="font-weight: bold;">3. ARQUIVOS DE TEXTO</span><br>
                 <br>
-                Pixel (picture element) - Cada ponto visível de uma
-                imagem digital.<br>
+                ASCII - (American Standard Code for Information
+                Interchange) Código usado para armazenar informação
+                correspondente a um caractere (letra, número ou símbolo)
+                no espaço de memória de 1 byte (8 bits). Pode codificar,
+                portanto, 256 caracteres diferentes.<br>
                 <br>
-                Bitmap - sistema de codificação de imagens em uma matriz
-                de pixels. Pelo sistema bitmap (também conhecido como
-                Raster), cada imagem é caracterizada por um comprimento
-                x, uma altura y e um número de bits por pixel.</p>
-              <p>Resolução - é o número de pixels (x * y) usados para
-                representar a imagem.<br>
+                <a href="ascii1.jpg">tabela de valores em ASCII</a><br>
+                <br>
+                Na verdade, o código ASCII só estabelece valores fixos
+                para metade das possibilidades de um byte, ou apenas 128
+                diferentes caracteres (ASCII 0 a 127): 26 letras
+                maiúsculas, 26 minúsculas, 10 algarismos, 33 sinais
+                (pontuação, acentuação, etc.) e 33 códigos de controle.<br>
+                <br>
+                As outras 128 combinações são usadas para caracteres
+                especiais, como letras acentuadas, letras de outros
+                alfabetos, etc. Estes caracteres (ASCII 128 a 255) podem
+                assumir valores diferentes em diferentes codificações
+                (EBCDIC, ANSI, OEM, ISO, Unicode, etc.), causando
+                algumas confusões quando o computador tenta ler o texto
+                usando o sistema errado.<br>
+                <br>
+                Diferentes tabelas de ASCII estendido:<br>
+                <a href="ascii2.jpg">ANSI</a> (American National
+                Standards Institute)<br>
+                <a href="ascii3.jpg">OEM</a> (Original Equipment
+                Manufacturer)<br>
+                <a href="ascii4.jpg">ISO-8859-1</a> (International
+                Standardisation Organization)<br>
               </p>
-              <p>Profundidade (em inglês, "bit depth") - é a quantidade
-                de bits utilizada para armazenar a informação relativa a
-                cada pixel (seja ela monocromática ou pancromática).</p>
-              <p>A qualidade de uma imagem digital vem da combinação
-                desses dois aspectos: resolução e profundidade.<br>
+              <p>Unicode - padrão criado em 1991 para representar
+                dezenas de milhares de caracteres diferentes, usando
+                dois bytes (16 bits) para cada caractere. Seus primeiros
+                128 carcateres são exatamente iguais aos da "primeira
+                página" ASCII.<br>
               </p>
-              <p> <a target="_blank" href="bitmapcirc.jpg">Representação
-
-
-
-                  de um círculo no sistema Bitmap</a><br>
+              <p>UTF-8 (Unicode Transformation Format, versão 8) -
+                variação do Unicode (1993) com comprimento variável: os
+                caracteres básicos são representados por 1 byte; os
+                acentuados e outros especiais, por 2 bytes. Atualmente é
+                o principal padrão de gravação de arquivos TXT.<br>
+              </p>
+              <p>Quando um processador, por algum motivo, interpreta
+                errado a codificação de um texto, os caracteres mais
+                comuns (a primeira página ASCII, fixa) são vistos
+                corretamente, mas os caracteres acentuados e especiais
+                (a segunda página ASCII, variável) aparecem de forma
+                estranha: por exemplo, <a moz-do-not-send="true"
+                  href="cod-errado-1.jpg" target="_blank">assim</a> ou <a
+                  moz-do-not-send="true" href="cod-errado-2.jpg"
+                  target="_blank">assim</a>.<br>
+              </p>
+              *****<br>
+              <br>
+              TIPOS E TAMANHOS DE ARQUIVOS DE TEXTO<br>
+              <p> </p>
+              <p>TXT - Arquivo de texto em que são armazenados apenas
+                seqüências de caracteres (ASCII ou equivalente), sem
+                formatação.<br>
+              </p>
+              <p>Um arquivo TXT com 1000 caracteres, codificado em ASCII
+                e suas variações, ocupa exatamente 1000 B (1 kB) de
+                memória - não esquecendo que cada espaço é um caractere
+                e cada quebra de linha pode ser 1 ou 2 caracteres.<br>
+              </p>
+              <p>Se este mesmo arquivo for codificado em Unicode, vai
+                ocupar 2000 bytes. Em UTF-8, vai ficar entre 1000 e 2000
+                bytes, dependendo do número de caracteres acentuados.<br>
+              </p>
+              <p>Outros tipos de arquivo de texto, como DOC (do Word),
+                ODT (do Write) ou RTF ("Rich Text Format"), armazenam
+                muitas outras informações além do texto (formatação,
+                fonte, tabelas, figuras, alterações, dados do usuário,
+                etc.) e por isso ocupam mais espaço.<br>
               </p>
               <p><br>
-                4.1. IMAGENS MONOCROMÁTICAS</p>
-              <p>Para imagens monocromáticas (em <a target="_blank"
-                  href="monocinza.jpg">pb</a> ou <a target="_blank"
-                  href="monoverde.jpg">não</a>), cada pixel pode ter
-                diferentes tons de cinza (ou outra cor), do branco até o
-                preto. Quanto maior a profundidade de cinza, ou seja,
-                quanto mais possibilidades diferentes de cinza são
-                disponíveis, melhor a qualidade da imagem, e mais espaço
-                de memória necessário.<br>
-                <br>
-                Em geral, reserva-se um byte para armazenar cada pixel
-                de uma imagem monocromática, o que dá a possibilidade de
-                trabalhar com 256 tons de cinza, do 000 (branco) ao 255
-                (preto). Mas, para diminuir o espaço de memória, pode-se
-                usar meio byte (4 bits) para cada pixel, o que dá apenas
-                16 diferentes tons. Ou ainda, numa imagem de alto
-                contraste, usar apenas 1 bit para cada pixel: neste caso
-                não há cinza, cada ponto da imagem ou é branco ou é
-                preto.<br>
-                <br>
-                Uma figura monocromática de 400 x 300 pixels utiliza 120
-                kB de memória quando armazenada em 8 bits (256 tons de
-                cinza). Mas ocuparia apenas 60 kB em 4 bits, ou 15 kB em
-                1 bit (alto contraste).<br>
-                <br>
-                Variações de qualidade (resolução e profundidade) num <a
-                  href="bitmaps.htm">bitmap monocromático</a>:<br>
-                <a href="imagem1.jpg">imagem 1</a> (400 x 300 pixels, 8
-                bits)<br>
-                <a href="imagem2.jpg">imagem 2</a> (400 x 300 pixels, 4
-                bits)<br>
-                <a href="imagem3.jpg">imagem 3</a> (400 x 300 pixels, 1
-                bit)<br>
-                <a href="imagem4.jpg">imagem 4</a> (133 x 100 pixels, 8
-                bits)<br>
-                <a href="imagem5.jpg">imagem 5</a> (66 x 50 pixels, 8
-                bits)<br>
-              </p>
-              <p><br>
-                4.2. IMAGENS A CORES</p>
-              <p>No caso de imagens a cores, o princípio é o mesmo, mas
-                a codificação da informação relativa a cada pixel é mais
-                complexa.<br>
-                <br>
-                <a target="_blank" href="rgb-canais.jpg">RGB</a> - é um
-                espaço de cor (forma de codificação de cor), que
-                armazena separadamente a informação relativa a cada uma
-                das 3 cores básicas: vermelho (red ou R), verde (green,
-                G) e azul (blue, B). A qualidade da codificação RGB vai
-                depender da "profundidade", ou seja, da quantidade de
-                bits reservados para cada pixel.<br>
-              </p>
-              <p>1-byte - O parâmetro mais antigo (e mais "econômico")
-                usa apenas 8 bits de profundidade de cor - 1 byte por
-                pixel, o que permite apenas 256 cores diferentes
-                (codificadas).<br>
-                <br>
-                High color - outro parâmetro de codificação (também já
-                superado), utiliza 16 bits (2 Bytes) para cada pixel - 5
-                bits pro vermelho, 5 pro azul e 6 pro verde (cujas
-                variações são mais perceptíveis pelo olho humano);
-                portanto, só pode registrar 65.536 cores diferentes (32
-                x 64 x 32). Os computadores Mac chamam este parâmetro de
-                "milhares de cores".<br>
-              </p>
-              <p>True color - parâmetro de codificação de cor que
-                utiliza 24 bits (3 Bytes) para armazenar a informação de
-                cor de cada pixel, em RGB: 1 byte por cor básica ou 256
-                variações para cada uma - no total, pode registrar
-                16.777.216 cores diferentes (256 x 256 x 256). Segundo o
-                Mac, este é o parâmetro "milhões de cores".<br>
-                <br>
-                <a href="prof-cor.jpg">Diferença de gradação</a> entre
-                os parâmetros "True color" e "High color".<br>
-                &nbsp;<br>
-                Pixels num monitor <a href="displ-pb.jpg">monocromático
-                  de alto contraste</a><br>
-                Pixels num monitor <a href="displ-8b.jpg">pancromático
-                  de 8 bits</a><br>
-                Pixels num monitor <a href="displ-tc.jpg">"True-color"
-                  (24 bits)</a><br>
-              </p>
-              <p>32 bits - Alguns programas gráficos (Photoshop, Gimp)
-                trabalham com um parâmetro de 32 bits (4 bytes por
-                pixel), que reserva 1 byte para a transparência da
-                imagem. Neste caso, cada pixel pode ser desde totalmente
-                transparente (000) até totalmente opaco (255), além de
-                ter as tais 16 milhões de possibilidades de cores.<br>
-              </p>
-              <p>Uma figura de 400 x 300 pixels em true-color, ao ser
-                armazenada no computador, utiliza 360 kB de memória: 400
-                x 300 x 3 = 360.000 bytes. Em high-color (16 bits), a
-                mesma figura utilizaria apenas 240 kB, mas com menos
-                profundidade de cor. Em 32 bits, ocuparia 480 kB.</p>
-              <p>Deep color - desde o início do século XXI já existem
-                programas capazes de processar imagens com profundidade
-                de cor maior que a do padrão "true color". Estes
-                padrões, chamados genericamente de "deep color",
-                trabalham com 30, 36 ou 48 bits por pixel, o que daria
-                respectivamente 1 bilhão, 68 bilhões ou 281 trilhões de
-                cores diferentes - muito além da capacidade de
-                distinguir cores do olho humano. Mais frequentemente, os
-                parâmetros "deep color" são denominados pelo número de
-                bits para cada canal de cor - ou seja: 10, 12 ou 16
-                bits.<br>
-              </p>
-              <p>* Em vídeo, existem sistemas diferentes do RGB para o
-                registro das cores. Em geral, estes sistemas trabalham
-                com a separação do sinal em duas partes: luminância
-                (luma) e crominância (chroma), intensidade luminosa e
-                variação de cor.<br>
-                <br>
-                <br>
-                4.3. <a target="_blank" href="matr-vetor.jpg">IMAGENS
-                  VETORIAIS</a></p>
-              <p>Existe também uma outra forma de armazenar imagens, que
-                utiliza coordenadas vetoriais em vez de coordenadas
-                cartesianas para armazenar informações. Claro que, num
-                sistema digital, todas as coordenadas se reduzem a zeros
-                e uns, mas o que muda é a forma como é medida a
-                distância de cada ponto da imagem à origem: <br>
-              </p>
-              <p>- ou por 2 distâncias <b>x</b> e <b>y</b> <span
-                  style="font-family: symbol; font-weight: bold;"></span><span
-                  style="font-weight: bold; font-family: symbol;"></span>(coordenadas
-                cartesianas ou matriciais) (em inglês, "raster");<br>
-              </p>
-              <p>- ou por uma distância<span style="font-weight: bold;">
-                  l </span>e um ângulo <span style="font-weight: bold;
-                  font-family: symbol;">a</span> (<a target="_blank"
-                  href="graficos.jpg">coordenadas vetoriais</a>) (em
-                inglês, "vector").<br>
-              </p>
-              <p> Atualmente os formatos mais comuns de arquivos para
-                imagens vetoriais são o SVG (Scalable Vector Graphics) e
-                o AI (do Adobe Illustrator), muito usados em arte
-                gráficas. Mas existem ainda formatos vetoriais mais
-                antigos, como o CDR (do programa Corel Draw) e o WMF
-                (Windows Meta File), utilizado em alguns tipos de
-                ilustrações, ou ainda o EPS (Encapsulated Post Script,
-                antecessor do formato PDF).<br>
-                <span style="font-weight: bold;"></span><br>
-                <br>
-                4.4. PIXEL, "PIXEL DE TELA" E DOT<br>
-              </p>
-              <p>A palavra pixel (elemento de imagem) é usada tanto para
-                o arquivo de imagem quanto para a sua visualização numa
-                tela ("pixel de tela" ou "display pixel"). Para a imagem
-                impressa, utiliza-se em vez de pixel a expressão dot
-                (ponto).<br>
-              </p>
-              <p>A qualidade de uma imagem numa tela depende da relação
-                entre o número de pixels e o tamanho em que ela é vista.
-                Nesse caso, é medida em <b>ppi</b> (<a href="ppi.jpg">pixels
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  per inch</a>, ou pixels por polegada).<br>
-              </p>
-              <p>A qualidade de uma imagem impressa depende da relação
-                entre o número de pontos de impressão e o tamanho da
-                impressão. Nesse caso, é medida em <b>dpi</b> (<a
-                  href="dpi.jpg">dots per inch</a>, ou pontos por
-                polegada).<br>
-              </p>
-              <p>Mas a qualidade intrínseca de uma imagem digital
-                depende apenas da sua resolução (número de pixels) e
-                profundidade (bits por pixel) - não do tamanho em que a
-                vemos na tela ou a imprmimos em papel.<br>
-              </p>
-              <p>Uma imagem digital não tem polegadas (nem centímetros)
-                - ela tem pixels. Por isso, não faz sentido falar numa
-                "imagem de 50 dpi" ou "imagem de 200 dpi", a não ser que
-                ela esteja impressa. Quando se associa um número de dpi
-                a uma imagem digital, isso é apenas uma <a
-                  href="balaodpi.htm">recomendação de impressão</a>, que
-                não altera em nada a sua qualidade.<br>
-              </p>
-              <p><br>
-              </p>
+                <small><small>* Quem quiser saber mais sobre conjuntos
+                    de caracteres, tem um ótimo artigo (em inglês) de
+                    Joel Spolsky, da Fog Creek Software <a
+                      target="_blank"
+href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">aqui</a>.</small><br>
+                </small><br>
+                <span style="font-weight: bold;"></span></p>
             </td>
           </tr>
         </tbody>
       </table>
       <big style="font-weight: bold;"><br>
-        <br>
       </big></blockquote>
   </body>
 </html>

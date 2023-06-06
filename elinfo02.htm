@@ -5,14 +5,14 @@
     <meta name="Author" content="Giba Assis Brasil">
     <meta name="GENERATOR" content="Mozilla/4.51 [pt] (WinNT; I)
       [Netscape]">
-    <title>ELEMENTOS INFO: ARQUIVOS DE TEXTO</title>
+    <title>EXEMPLO DE ALGORITMO</title>
   </head>
   <body vlink="#3333ff" text="#000000" link="#3333ff" bgcolor="#ccffff"
     alink="#3333ff">
     <blockquote><b><font size="+1">UNISINOS / CRAV - CURSO DE REALIZAÇÃO
           AUDIOVISUAL</font></b> <br>
-      <b><font size="+1">ESPECIALIDADE EM MONTAGEM I - 20<font size="+1">22<br>
-          </font></font></b><b><font size="+1">Prof. GIBA ASSIS BRASIL<br>
+      <b><font size="+1">ESPECIALIDADE EM MONTAGEM - 2023</font></b><br>
+      <b><font size="+1">Prof. GIBA ASSIS BRASIL<br>
           <br>
           <br>
         </font></b>
@@ -21,97 +21,132 @@
         <tbody>
           <tr>
             <td style="vertical-align: top;"><span style="font-weight:
-                bold;">ELEMENTOS DE INFORMÁTICA PARA MONTADORES</span><br>
-              <p> <span style="font-weight: bold;">3. ARQUIVOS DE TEXTO</span><br>
-                <br>
-                ASCII - (American Standard Code for Information
-                Interchange) Código usado para armazenar informação
-                correspondente a um caractere (letra, número ou símbolo)
-                no espaço de memória de 1 byte (8 bits). Pode codificar,
-                portanto, 256 caracteres diferentes.<br>
-                <br>
-                <a href="ascii1.jpg">tabela de valores em ASCII</a><br>
-                <br>
-                Na verdade, o código ASCII só estabelece valores fixos
-                para metade das possibilidades de um byte, ou apenas 128
-                diferentes caracteres (ASCII 0 a 127): 26 letras
-                maiúsculas, 26 minúsculas, 10 algarismos, 33 sinais
-                (pontuação, acentuação, etc.) e 33 códigos de controle.<br>
-                <br>
-                As outras 128 combinações são usadas para caracteres
-                especiais, como letras acentuadas, letras de outros
-                alfabetos, etc. Estes caracteres (ASCII 128 a 255) podem
-                assumir valores diferentes em diferentes codificações
-                (EBCDIC, ANSI, OEM, ISO, Unicode, etc.), causando
-                algumas confusões quando o computador tenta ler o texto
-                usando o sistema errado.<br>
-                <br>
-                Diferentes tabelas de ASCII estendido:<br>
-                <a href="ascii2.jpg">ANSI</a> (American National
-                Standards Institute)<br>
-                <a href="ascii3.jpg">OEM</a> (Original Equipment
-                Manufacturer)<br>
-                <a href="ascii4.jpg">ISO-8859-1</a> (International
-                Standardisation Organization)<br>
+                bold;">ELEMENTOS DE INFORMÁTICA PARA MONTADORES</span><small
+                style="font-weight: bold;"><br>
+              </small> <br>
+              <b>2. ARQUIVOS E PROGRAMAS</b><b><br>
+              </b>
+              <p><b>2.1. Arquivos</b><br>
               </p>
-              <p>Unicode - padrão criado em 1991 para representar
-                dezenas de milhares de caracteres diferentes, usando
-                dois bytes (16 bits) para cada caractere. Seus primeiros
-                128 carcateres são exatamente iguais aos da "primeira
-                página" ASCII.<br>
+              <p>Arquivos são seqüências de bits, normalmente
+                organizadas em bytes, que podem ser entendidas pelo
+                computador como um conjunto autônomo e funcional de
+                dados. Existem vários tipos de arquivos, conforme o tipo
+                de dados que eles armazenam (embora, no fim das contas,
+                todos eles sejam seqüências de zeros e uns).</p>
+              <p>Mas a principal classificação dos arquivos é binária:
+                ou eles são arquivos de dados ("data") ou são programas
+                ("software").<br>
               </p>
-              <p>UTF-8 (Unicode Transformation Format, versão 8) -
-                variação do Unicode (1993) com comprimento variável: os
-                caracteres básicos são representados por 1 byte; os
-                acentuados e outros especiais, por 2 bytes. Atualmente é
-                o principal padrão de gravação de arquivos TXT.<br>
+              <p><b>2.2. Programas</b><br>
               </p>
-              <p>Quando um processador, por algum motivo, interpreta
-                errado a codificação de um texto, os caracteres mais
-                comuns (a primeira página ASCII, fixa) são vistos
-                corretamente, mas os caracteres acentuados e especiais
-                (a segunda página ASCII, variável) aparecem de forma
-                estranha: por exemplo, <a moz-do-not-send="true"
-                  href="cod-errado-1.jpg" target="_blank">assim</a> ou <a
-                  moz-do-not-send="true" href="cod-errado-2.jpg"
-                  target="_blank">assim</a>.<br>
+              <p>Programas são os arquivos que armazenam instruções para
+                o computador. Cada conjunto de instruções bem definidas,
+                executáveis, com o objetivo de resolver um problema,
+                pode ser chamado também de algoritmo.<br>
               </p>
-              *****<br>
+              <p>Existem programas para lidar com dados de outros
+                arquivos, para transferir dados de um setor de memória a
+                outro, ou da memória para a tela do computador, ou para
+                a impressora, etc. E existem programas que são conjuntos
+                extremamente complexos de instruções sobre como agir em
+                relação a novas instruções geradas pelo usuário, através
+                do teclado, do mouse, de voz, de reconhecimento facial,
+                etc. Os arquivos de programas também podem ser
+                classificados em: arquivos executáveis, bibliotecas,
+                arquivos do sistema operacional, etc.<br>
+                <br>
+                <b>2.3. Arquivos de dados</b><br>
+              </p>
+              <p>Arquivos de dados são os arquivos que apenas armazenam
+                dados, para que estes sejam manipulados pelos arquivos
+                de programas, de acordo com as instruções do usuário. A
+                partir daqui, vamos estudar 4 tipos principais de
+                arquivos de dados, como eles são gerados e armazenados,
+                e como nós podemos lidar com eles:<br>
+              </p>
+              <p>- arquivos de texto<br>
+                - arquivos de imagem<br>
+                - arquivos de som<br>
+                - arquivos de imagem em movimento<br>
+              </p>
               <br>
-              TIPOS E TAMANHOS DE ARQUIVOS DE TEXTO<br>
-              <p> </p>
-              <p>TXT - Arquivo de texto em que são armazenados apenas
-                seqüências de caracteres (ASCII ou equivalente), sem
-                formatação.<br>
+              <b>2.4. Algoritmos</b><br>
+              <br>
+              Segundo o Houaiss, algoritmo é uma "sequência finita de
+              regras, raciocínios ou operações que, aplicada a um número
+              finito de dados, permite solucionar classes semelhantes de
+              problemas".<br>
+              <br>
+              O nome vem de um matemático e astrônomo persa do século IX
+              chamado Muhammad Ibn Musa al-Khwarizmi, o mesmo que também
+              gerou a palavra 'algarismo' (dígito numérico).<br>
+              <br>
+              Em matemática simples usamos algoritmos para extrair a
+              raiz quadrada de um número, ou o Máximo Divisor Comum de
+              dois números, ou para descobrir se um número é primo, etc.
+              Engenheiros gostam de dizer que nós usamos algoritmos no
+              dia-a-dia, para decidir onde vamos almoçar, que filmes
+              vamos ver ou até por quem vamos nos apaixonar (!).<br>
+              <br>
+              Algoritmos podem se tornar complexos demais pela
+              quantidade de regras que envolvem a tomada de decisões, ou
+              pelo número de vezes que ele exige repetir determinados
+              procedimentos. Nesse caso, uma máquina (um computador)
+              pode resolvê-lo bem mais rápido e, em princípio, sem erro.<br>
+              <br>
+              Um algoritmo pode ser apresentado em forma de <a
+                href="fluxograma.jpg">fluxograma</a>, ou ser escrito
+              diretamente em linguagem de máquina: nesse caso ele é um
+              programa de computador (software). Mas também pode ser
+              escrito como uma série de instruções executáveis por um
+              ser humano.<br>
+              <br>
+              <b>2.5. Exemplo de algoritmo</b><b><small><br>
+                </small></b>(para divisão de números inteiros com mais
+              de dois dígitos)<br>
+              <p>(1) Colocar o dividendo em A e o divisor em B.<br>
               </p>
-              <p>Um arquivo TXT com 1000 caracteres, codificado em ASCII
-                e suas variações, ocupa exatamente 1000 B (1 kB) de
-                memória - não esquecendo que cada espaço é um caractere
-                e cada quebra de linha pode ser 1 ou 2 caracteres.<br>
+              <p>(2) Copiar A para C.<br>
               </p>
-              <p>Se este mesmo arquivo for codificado em Unicode, vai
-                ocupar 2000 bytes. Em UTF-8, vai ficar entre 1000 e 2000
-                bytes, dependendo do número de caracteres acentuados.<br>
+              <p>(3) Retirar o dígito mais à esquerda de C<br>
+                &nbsp;&nbsp;&nbsp; e colocá-lo à direita de D.<br>
               </p>
-              <p>Outros tipos de arquivo de texto, como DOC (do Word),
-                ODT (do Write) ou RTF ("Rich Text Format"), armazenam
-                muitas outras informações além do texto (formatação,
-                fonte, tabelas, figuras, alterações, dados do usuário,
-                etc.) e por isso ocupam mais espaço.<br>
+              <p>(4) Comparar D com B:<br>
+                &nbsp;&nbsp;&nbsp; se D &lt; B, voltar para (3).<br>
               </p>
-              <p><br>
-                <small><small>* Quem quiser saber mais sobre conjuntos
-                    de caracteres, tem um ótimo artigo (em inglês) de
-                    Joel Spolsky, da Fog Creek Software <a
-                      target="_blank"
-href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">aqui</a>.</small><br>
-                </small><br>
-                <span style="font-weight: bold;"></span></p>
+              <p>(5) Fazer a divisão inteira de D/B:<br>
+                &nbsp;&nbsp;&nbsp; colocar o resultado inteiro à direita
+                de E;<br>
+                &nbsp;&nbsp;&nbsp; colocar o resto em F (sobrescrever).<br>
+              </p>
+              <p>(6) Conferir se ainda tem dígitos em C:<br>
+                &nbsp;&nbsp;&nbsp; se não tem, pular pra (9).<br>
+              </p>
+              <p>(7) Copiar o valor de F para D (sobrescrever).<br>
+              </p>
+              <p>(8) Voltar para (3).<br>
+              </p>
+              <p>(9) A divisão está feita.<br>
+                &nbsp;&nbsp;&nbsp; A / B = E e resta F<br>
+              </p>
+              <p>*****<br>
+              </p>
+              <p>A (dividendo): <br>
+                B (divisor): <br>
+                C (dividendo futuro): <br>
+                D (dividendo parcial): <br>
+                E (quociente): <br>
+                F (resto): <br>
+                <br>
+              </p>
             </td>
           </tr>
         </tbody>
       </table>
-      <big style="font-weight: bold;"><br>
-      </big></blockquote>
+      <p><br>
+        <br>
+      </p>
+    </blockquote>
   </body>
 </html>
